@@ -19,14 +19,12 @@ namespace CSharpCodeAnaliserWebApi.TestCases.Tests
             try
             {
                 var result = CSharpScript.EvaluateAsync(BuildCode(candidateCode)).Result;
-                return ChceckCodeResult(result);
-                
+                return ChceckCodeResult(result);   
             }
             catch(Exception ex)
             {
                 return new CodeStatus(false, "Compilator exception!", ex.Message.ToString());
-            }
-           
+            }         
         }
         private string BuildCode(string candidateCode)
         {
@@ -36,7 +34,6 @@ namespace CSharpCodeAnaliserWebApi.TestCases.Tests
             code.AppendLine(Input);
             code.AppendLine(candidateCode);
             return code.ToString();
-
         }
         private CodeStatus ChceckCodeResult(Object result)
         {
@@ -50,7 +47,6 @@ namespace CSharpCodeAnaliserWebApi.TestCases.Tests
             {
                 if (result.ToString().Equals(Output.Single()))
                     return new CodeStatus(true, "All test passed!", "Good Job!");
-
             }
             return new CodeStatus(false, "Test failed!",":(");
         }
