@@ -10,9 +10,8 @@
         {
             Status = status;
             StatusTitle = title;
-            StatusDescription = description;    
+            StatusDescription = description;
         }
-
         public bool GetStatus()
         {
             return Status;

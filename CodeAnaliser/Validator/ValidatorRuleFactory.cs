@@ -2,11 +2,6 @@
 using CSharpCodeAnaliserWebApi.CodeAnaliser.Database.Entities;
 using CSharpCodeAnaliserWebApi.Validator;
 using CSharpCodeAnaliserWebApi.Validator.Rules;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CSharpCodeAnaliserWebApi
 {
@@ -27,6 +22,5 @@ namespace CSharpCodeAnaliserWebApi
             }
             return validatorRules;
         }
-
     }
 }

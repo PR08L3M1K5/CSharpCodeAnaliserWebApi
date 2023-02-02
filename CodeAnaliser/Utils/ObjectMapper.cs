@@ -13,8 +13,7 @@ namespace CSharpCodeAnaliserWebApi.CodeAnaliser.Utils
                 cfg.CreateMap<CodeExcerciseEntity, CandidateExerciseDto>();
                 cfg.CreateMap<TestCaseDto, TestCaseEntity>();
                 cfg.CreateMap<ValidatorRuleDto, ValidatorRuleEntity>();
-            }).CreateMapper();
-            
+            }).CreateMapper();  
         }
     }
 }

@@ -14,7 +14,6 @@ namespace CSharpCodeAnaliserWebApi.TestCases.Tests
             Output = output.Trim().Split(';');
             Input = input;
         }
-
         public CodeStatus TestCode(string candidateCode) 
         {
             try
@@ -39,12 +38,11 @@ namespace CSharpCodeAnaliserWebApi.TestCases.Tests
             return code.ToString();
 
         }
-
         private CodeStatus ChceckCodeResult(Object result)
         {
             if (result.GetType().IsArray || result.GetType().IsGenericType)
             {
-                string[] arr = ((IEnumerable)result).Cast<object>().Select(x => x.ToString()).ToArray();
+                string[] arr = ((IEnumerable)result).Cast<object>().Select(r => r.ToString()).ToArray();
                 if (arr.SequenceEqual(Output))
                     return new CodeStatus(true, "All test passed!", "Good Job!");
             }
@@ -54,12 +52,7 @@ namespace CSharpCodeAnaliserWebApi.TestCases.Tests
                     return new CodeStatus(true, "All test passed!", "Good Job!");
 
             }
-            return new CodeStatus(false, "Test failed!", "Should be: " + PrintTable());
-        }
-
-        private string PrintTable()
-        {
-            return string.Join("; ", Output);
+            return new CodeStatus(false, "Test failed!",":(");
         }
     }
 }

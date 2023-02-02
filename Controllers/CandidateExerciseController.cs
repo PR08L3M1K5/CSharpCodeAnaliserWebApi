@@ -1,12 +1,7 @@
 ﻿using AutoMapper;
-using CSharpCodeAnaliserWebApi.CodeAnaliser.Database.Entities;
 using CSharpCodeAnaliserWebApi.CodeAnaliser.Utils;
 using CSharpCodeAnaliserWebApi.CodeAnaliser.Utils.Dto;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.CodeAnalysis.VisualBasic.Syntax;
-using Newtonsoft.Json;
-using System.Text.Json;
-using System.Text.Json.Nodes;
 
 namespace CSharpCodeAnaliserWebApi.Controllers
 {
@@ -14,13 +9,9 @@ namespace CSharpCodeAnaliserWebApi.Controllers
     [Route("[Controller]")]
     public class CandidateExerciseController : ControllerBase
     {
-        private readonly PostgresDatabase _context;
         private readonly CodeValidatorFacade CodeValidatorFacade;
-
-        public CandidateExerciseController(PostgresDatabase context, IMapper
-            mapper)
+        public CandidateExerciseController(PostgresDatabase context, IMapper mapper)
         {
-            _context = context;
             CodeValidatorFacade = new CodeValidatorFacade();
         }
         [HttpGet]

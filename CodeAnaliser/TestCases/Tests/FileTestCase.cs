@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CSharpCodeAnaliserWebApi.TestCases.Tests
+﻿namespace CSharpCodeAnaliserWebApi.TestCases.Tests
 {
     class FileTestCase
     {
-
     }
 }

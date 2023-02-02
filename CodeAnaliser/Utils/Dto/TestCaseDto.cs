@@ -1,6 +1,4 @@
-﻿using System.Drawing;
-
-namespace CSharpCodeAnaliserWebApi.CodeAnaliser.Utils.Dto
+﻿namespace CSharpCodeAnaliserWebApi.CodeAnaliser.Utils.Dto
 {
     public class TestCaseDto
     {

@@ -11,8 +11,7 @@ namespace CSharpCodeAnaliserWebApi.Validator
         }
 
         public CodeStatus ValidateCode(string candidateCode)
-        {
-          
+        { 
             foreach (var validatorRule in  ValidatorRules)
             {
                var result = validatorRule.Validate(candidateCode);

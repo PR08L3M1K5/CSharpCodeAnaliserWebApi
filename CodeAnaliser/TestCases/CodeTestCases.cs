@@ -1,11 +1,6 @@
 ﻿using CSharpCodeAnaliserWebApi.CodeAnaliser.Database.Entities;
 using CSharpCodeAnaliserWebApi.CodeAnaliser.Utils;
 using CSharpCodeAnaliserWebApi.TestCases;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CSharpCodeAnaliserWebApi
 {
